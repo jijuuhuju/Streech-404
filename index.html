@@ -8,50 +8,44 @@
 </head>
 <body>
 
-  <!-- 🟢 ナビゲーションバー（指定のグリーン #00d631） -->
+  <!-- 🟢 ナビゲーションバー（Streech共通 #00d631） -->
   <header>
     <div class="header-left">
       <div class="logo-container">
         <img src="./streechlogo.svg" alt="Streech" class="logo-image">
       </div>
-      <a href="https://github.io" class="menu-item">エディタに戻る</a>
     </div>
   </header>
 
-  <!-- 🔍 404メインGUIエリア -->
+  <!-- 🔍 404メインGUIエリア（ゴナちゃんのビジュアルのみに凝縮） -->
   <main id="error-container">
     <div class="error-visual-area">
       
-      <!-- 🛠️ 【新設】画像ファイルを使わず、CSSだけで描画される「困り顔のゴナちゃん」 -->
+      <!-- CSSだけで完全に再現した本物のゴナちゃん（困りモード） -->
       <div class="css-gona-wrapper">
-        <!-- 頭の上のハテナマーク -->
+        <!-- 頭の上のゆらゆら揺れるハテナ -->
         <div class="question-mark">?</div>
-        <!-- 両耳 -->
-        <div class="gona-ear left"></div>
-        <div class="gona-ear right"></div>
-        <!-- 顔の輪郭 -->
-        <div class="gona-head">
-          <!-- 困っているハの字の眉毛 -->
-          <div class="gona-eyebrow left"></div>
-          <div class="gona-eyebrow right"></div>
-          <!-- ぐるぐる、またはウルウルした目 -->
-          <div class="gona-eye left"><div class="pupil"></div></div>
-          <div class="gona-eye right"><div class="pupil"></div></div>
-          <!-- への字に曲がった困り口 -->
-          <div class="gona-mouth"></div>
+        
+        <!-- 特徴的な2本の耳 -->
+        <div class="gona-ear-left"></div>
+        <div class="gona-ear-right"></div>
+        
+        <!-- 緑色の丸っこいテレビ型フレーム（頭部） -->
+        <div class="gona-outer-head">
+          <!-- 内側の白い画面エリア -->
+          <div class="gona-inner-face">
+            <!-- 困っている「ハの字」の眉毛 -->
+            <div class="gona-eyebrow left"></div>
+            <div class="gona-eyebrow right"></div>
+            <!-- 本物通りのシンプルな2つの黒丸目 -->
+            <div class="gona-real-eye left"></div>
+            <div class="gona-real-eye right"></div>
+          </div>
         </div>
       </div>
 
+      <!-- エラーコードバッジ -->
       <div class="error-code-badge">ERROR: 404</div>
-    </div>
-
-    <div class="error-text-area">
-      <h2>ページが見つかりません</h2>
-      <p>ゴナちゃんもプログラムを探し回りましたが、見つかりませんでした。URLが間違っている可能性があります。</p>
-      
-      <a href="https://github.io" class="return-home-btn">
-        ホームへ戻る
-      </a>
     </div>
   </main>
 
