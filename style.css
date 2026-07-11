@@ -1,0 +1,64 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #eff3f8; color: #575e75; height: 100vh; display: flex; flex-direction: column; overflow: hidden; user-select: none; }
+
+/* ナビゲーションバー（Streech共通の #00d631） */
+header { height: 48px; background: #00d631; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: bold; color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 10; }
+.header-left { display: flex; align-items: center; gap: 16px; height: 100%; }
+.logo-container { height: 26px; display: flex; align-items: center; }
+.logo-image { height: 100%; width: auto; object-fit: contain; }
+.menu-item { cursor: pointer; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.1s; text-decoration: none; color: white; font-weight: bold; }
+.menu-item:hover { background: rgba(0, 0, 0, 0.1); }
+
+/* 404レイアウト */
+#error-container { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; gap: 24px; }
+.error-visual-area { display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; }
+
+/* 🛠️ 【完全自作】CSSゴナちゃんアートの構造・デザイン定義 */
+.css-gona-wrapper { width: 160px; height: 160px; position: relative; display: flex; align-items: flex-end; justify-content: center; animation: float-animation 3s ease-in-out infinite; }
+
+/* 頭の上のゆらゆら揺れる大きなハテナマーク */
+.question-mark { position: absolute; top: -10px; font-size: 2.2rem; font-weight: 900; color: #ff4c4c; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); animation: question-bounce 1.5s ease-in-out infinite alternate; }
+
+/* ゴナちゃん（gona）のエメラルドグリーンの頭部輪郭 */
+.gona-head { width: 110px; height: 95px; background: #00d631; border: 3px solid #575e75; border-radius: 50% 50% 45% 45%; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.06); z-index: 5; }
+
+/* 耳の造形（左右にピンと張った形状） */
+.gona-ear { width: 30px; height: 45px; background: #00d631; border: 3px solid #575e75; border-radius: 50% 50% 10% 10%; position: absolute; top: 15px; z-index: 2; }
+.gona-ear.left { left: -14px; transform: rotate(-35deg); border-right: none; }
+.gona-ear.right { right: -14px; transform: rotate(35deg); border-left: none; }
+
+/* 困っている「ハの字」のまゆ毛 */
+.gona-eyebrow { width: 18px; height: 4px; background: #575e75; border-radius: 2px; position: absolute; top: 26px; }
+.gona-eyebrow.left { left: 24px; transform: rotate(20deg); }
+.gona-eyebrow.right { right: 24px; transform: rotate(-20deg); }
+
+/* 驚いてカタカタ震えるウルウル目 */
+.gona-eye { width: 22px; height: 22px; background: white; border: 3px solid #575e75; border-radius: 50%; position: absolute; top: 34px; display: flex; align-items: center; justify-content: center; }
+.gona-eye.left { left: 22px; }
+.gona-eye.right { right: 22px; }
+.gona-eye .pupil { width: 8px; height: 8px; background: #575e75; border-radius: 50%; position: relative; }
+
+/* への字に曲がった困り口（CSSカーブ表現） */
+.gona-mouth { width: 20px; height: 10px; border: 3px solid #575e75; border-bottom: none; border-left: none; border-right: none; border-radius: 50% 50% 0 0; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+
+/* アニメーション：ゆらゆら浮遊 */
+@keyframes float-animation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+/* アニメーション：ハテナマークのバウンス */
+@keyframes question-bounce {
+  0% { transform: translateY(0px) scale(0.95); opacity: 0.8; }
+  100% { transform: translateY(-5px) scale(1.05); opacity: 1; }
+}
+
+.error-code-badge { background: #ff4c4c; color: white; font-size: 0.75rem; font-weight: bold; padding: 4px 12px; border-radius: 12px; letter-spacing: 1px; box-shadow: 0 2px 8px rgba(255, 76, 76, 0.15); z-index: 10; }
+
+/* テキストとボタン */
+.error-text-area h2 { font-size: 1.4rem; color: #3d4254; margin-bottom: 12px; font-weight: bold; }
+.error-text-area p { font-size: 0.85rem; color: #8a91a5; max-width: 380px; line-height: 1.6; margin-bottom: 24px; padding: 0 10px; }
+
+.return-home-btn { display: inline-block; background: #00d631; color: white; text-decoration: none; font-size: 0.85rem; font-weight: bold; padding: 12px 36px; border-radius: 24px; box-shadow: 0 4px 12px rgba(0, 214, 49, 0.2); transition: all 0.2s ease; }
+.return-home-btn:hover { background: #00b329; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 214, 49, 0.3); }
+.return-home-btn:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 214, 49, 0.2); }
