@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- 🟢 ナビゲーションバー（指定のグリーン #00d631） -->
+  <header>
+    <div class="header-left">
+      <div class="logo-container">
+        <img src="./streechlogo.svg" alt="Streech" class="logo-image">
+      </div>
+      <a href="https://github.io" class="menu-item">エディタに戻る</a>
+    </div>
+  </header>
+
+  <!-- 🔍 404メインGUIエリア -->
+  <main id="error-container">
+    <div class="error-visual-area">
+      
+      <!-- 🛠️ 【新設】画像ファイルを使わず、CSSだけで描画される「困り顔のゴナちゃん」 -->
+      <div class="css-gona-wrapper">
+        <!-- 頭の上のハテナマーク -->
+        <div class="question-mark">?</div>
+        <!-- 両耳 -->
+        <div class="gona-ear left"></div>
+        <div class="gona-ear right"></div>
+        <!-- 顔の輪郭 -->
+        <div class="gona-head">
+          <!-- 困っているハの字の眉毛 -->
+          <div class="gona-eyebrow left"></div>
+          <div class="gona-eyebrow right"></div>
+          <!-- ぐるぐる、またはウルウルした目 -->
+          <div class="gona-eye left"><div class="pupil"></div></div>
+          <div class="gona-eye right"><div class="pupil"></div></div>
+          <!-- への字に曲がった困り口 -->
+          <div class="gona-mouth"></div>
+        </div>
+      </div>
+
+      <div class="error-code-badge">ERROR: 404</div>
+    </div>
+
+    <div class="error-text-area">
+      <h2>ページが見つかりません</h2>
+      <p>ゴナちゃんもプログラムを探し回りましたが、見つかりませんでした。URLが間違っている可能性があります。</p>
+      
+      <a href="https://github.io" class="return-home-btn">
+        ホームへ戻る
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
